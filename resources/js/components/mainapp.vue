@@ -34,10 +34,6 @@
         <div class="_2menu _box_shadow justify-content-between">
           <div class="_2menu_logo">
             <ul class="open_button">
-              <!-- <li>
-                <Icon type="ios-list" />
-              </li> -->
-              <!-- <li><Icon type="ios-albums" /></li> -->
             </ul>
           </div>
 
@@ -66,7 +62,6 @@ export default{
     created(){
        this.$store.commit('setUpdateUser', this.user)
        this.$store.commit('setUserPermission', this.permission)
-       console.log("from main",this.user)
     },
 
 }

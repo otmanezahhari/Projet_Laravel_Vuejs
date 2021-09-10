@@ -68,19 +68,6 @@
 				</Modal>
 
                 <!-- delete alert modal -->
-				<!-- <Modal v-model="showDeleteModal" width="360">
-					<p slot="header" style="color:#f60;text-align:center">
-						<Icon type="ios-information-circle"></Icon>
-						<span>Delete confirmation</span>
-					</p>
-					<div style="text-align:center">
-						<p>Are you sure you want to delete tag?.</p>
-
-					</div>
-					<div slot="footer">
-						<Button type="error" size="large" long :loading="isDeleing" :disabled="isDeleing" @click="deleteCrypto" >Delete</Button>
-					</div>
-				</Modal> -->
                 <deleteModal></deleteModal>
 
             </div>
@@ -165,8 +152,7 @@ export default {
         },
         async deleteCrypto() {
             this.isDeleing = true
-            // if(!confirm('Are you sure you want to delete this crypto ?')) return
-            // this.$set(tag, 'isDeleting', true)
+
             const res = await this.callApi('post', 'app/delete_crypto',this.deleteItem)
             if(res.status===200){
                 this.cryptos.splice(this.deletingIndex,1)
@@ -187,10 +173,7 @@ export default {
 				isDeleted : false,
 			}
             this.$store.commit('setDeletingModalObj', deleteModalObj)
-            console.log('delete method called')
-            // this.deleteItem = tag
-            // this.deletingIndex = id
-            // this.showDeleteModal = true
+
         }
 
 
@@ -213,7 +196,7 @@ export default {
     watch : {
 		getDeleteModalObj(obj){
 			if(obj.isDeleted){
-                console.log(this)
+                
 				this.cryptos.splice(obj.deletingIndex,1)
 			}
 		}

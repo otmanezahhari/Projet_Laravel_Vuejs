@@ -71,7 +71,6 @@ export default {
         getQuantity(crypto){
             let myPortfolioQuantity = 0
             for(let i =0; i<this.historique.length;i++){
-                console.log(this.historique[i].coinName,crypto)
 
                 if(this.historique[i].coinName == crypto){
                     if(this.historique[i].actionType == "ACHAT"){
@@ -92,7 +91,7 @@ export default {
         getValue(crypto){
             let coursTotal = 0
             for(let i =0; i<this.historique.length;i++){
-                console.log(this.historique[i].coinName,crypto)
+                
                 if(this.historique[i].coinName == crypto){
                     if(this.historique[i].actionType == "ACHAT"){
 

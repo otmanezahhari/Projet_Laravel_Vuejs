@@ -141,7 +141,7 @@ export default {
                     this.swr();
                 }
             }else{
-                console.log("nok")
+
                 this.swr();
             }
         }
@@ -173,7 +173,7 @@ export default {
         await this.axios.get(symbolePrixURLAPI)
             .then((response) =>{
 
-                console.log("response",response.data)
+
                 this.data.cours = response.data.EUR
 
             })
@@ -186,7 +186,7 @@ export default {
 
         for(let i =0; i<SpecificData.length;i++){
 
-            console.log("spec" ,SpecificData )
+           
 
            if(SpecificData[i].actionType =="ACHAT"){
                this.myPortfolioQuantity = this.myPortfolioQuantity + SpecificData[i].quantity

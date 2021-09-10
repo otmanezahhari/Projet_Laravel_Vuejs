@@ -9,8 +9,7 @@
                         Roles Management
                         <Select v-model="data.id"  placeholder="Select admin type" style="width:300px"  @on-change="changeAdmin">
                             <Option :value="r.id" v-for="(r, i) in roles" :key="i" v-if="roles.length">{{r.roleName}}</Option>
-                            <!-- <Option value="Editor" >Editor</Option>
-                            <Option value="Admin" >Admin</Option> -->
+
                         </Select>
 
                     </p>
@@ -28,7 +27,7 @@
 							</tr>
 
                             <!----- Items --->
-                            	<!-- ITEMS  v-if="isDeletePermitted"-->
+                            	
 							 <tr v-for="(r, i) in resources" :key="i">
                                 <td>{{r.resourceName}}</td>
                                 <td><Checkbox v-model="r.read"></Checkbox></td>

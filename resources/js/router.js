@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
-import DashboardPage from "./components/pages/DashboardPage"
-import CryptoDetail from "./components/pages/CryptoDetail"
-import Historique from "./components/pages/Historique"
-import Portefeuille from "./components/pages/Portefeuille"
+import DashboardPage from "./user/pages/DashboardPage"
+import CryptoDetail from "./user/pages/CryptoDetail"
+import Historique from "./user/pages/Historique"
+import Portefeuille from "./user/pages/Portefeuille"
 
 
 // Admin pages
